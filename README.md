@@ -30,9 +30,6 @@ npm run test:webhook:race
 Ожидаемый результат: `processed: 1`, `duplicate: 9`.
 
 
-```bash
-```
-
 ## Решения
 
 - **Идемпотентность webhook'а** — `UNIQUE` на `payment_id` + обработка `23505` при вставке. `SELECT` перед `INSERT` не защищает от параллельных ретраев; constraint в БД — да.
