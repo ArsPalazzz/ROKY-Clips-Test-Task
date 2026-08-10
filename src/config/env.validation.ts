@@ -24,6 +24,7 @@ export function validateEnv(
   const { error, value } = envValidationSchema.validate(config, {
     abortEarly: false,
     convert: true,
+    allowUnknown: true,
   });
 
   if (error) {
